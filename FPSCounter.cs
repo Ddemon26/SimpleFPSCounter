@@ -6,17 +6,17 @@ using UnityEngine;
 /// </summary>
 public class FPSCounter : MonoBehaviour
 {
-    private GUIStyle fpsDisplayStyle;
-    private Rect fpsDisplayRect;
+    private GUIStyle fpsDisplayStyle;  // Style for displaying the FPS counter.
+    private Rect fpsDisplayRect;       // Rectangle defining the position and size of the FPS display.
 
-    private int frameCounter;
-    private float timeSinceLastUpdate;
-    private double currentFPS;
+    private int frameCounter;          // Counts the number of frames rendered.
+    private float timeSinceLastUpdate; // Time elapsed since the last FPS update.
+    private double currentFPS;         // The current frames per second value.
 
-    private const float UpdateInterval = 0.5f;
-    private const int ScreenSizeChangeThreshold = 10;
-    private int screenMaxDimension;
-
+    private const float UpdateInterval = 0.5f;  // Interval for updating the FPS counter.
+    private const int ScreenSizeChangeThreshold = 10; // Threshold for detecting screen size changes.
+    private int screenMaxDimension;   // Maximum dimension of the screen (width or height).
+    
     /// <summary>
     /// Awake is called when the script instance is being loaded.
     /// It initializes the UI style and ensures that the GameObject is not destroyed on scene changes.
